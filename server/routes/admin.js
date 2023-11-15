@@ -17,6 +17,10 @@ router.get("/me", authenticateJwt, async (req, res) => {
         username: admin.username
     })
 });
+router.get("/", (req, res) => {
+  
+    res.status(200).send("Hello Duniya")
+});
 
 router.post('/signup', (req, res) => {
     const { username, password } = req.body;
